@@ -14,8 +14,9 @@
 #+SELECT_TAGS: export
 
 * Goal
-
+ 
 - Incorporating Renjin with Spark, to make the R calculation scalable
+- [[https://github.com/bedatadriven/renjin][Renjin]] is a JVM-based interpreter for the R language for the statistical analysis.
 
 * Install
 

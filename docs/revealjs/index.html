@@ -8,8 +8,8 @@
 <meta name="description" content=""/>
 <meta name="keywords" content=""/>
 
-<link rel="stylesheet" href="~/Downloads/reveal.js/css/reveal.css"/>
-<link rel="stylesheet" href="~/Downloads/reveal.js/css/theme/default.css" id="theme"/>
+<link rel="stylesheet" href="http://cdn.jsdelivr.net/reveal.js/3.0.0/css/reveal.css"/>
+<link rel="stylesheet" href="http://cdn.jsdelivr.net/reveal.js/3.0.0/css/theme/default.css" id="theme"/>
 
 <!-- If the query includes 'print-pdf', include the PDF print sheet -->
 <script>
@@ -17,7 +17,7 @@
         var link = document.createElement( 'link' );
         link.rel = 'stylesheet';
         link.type = 'text/css';
-        link.href = '~/Downloads/reveal.js/css/print/pdf.css';
+        link.href = 'http://cdn.jsdelivr.net/reveal.js/3.0.0/css/print/pdf.css';
         document.getElementsByTagName( 'head' )[0].appendChild( link );
     }
 </script>
@@ -37,16 +37,34 @@
 <section id="sec-1" >
 
 <h2><span class="section-number-2">1</span> This is a test</h2>
-<p>
-Helloworld!
-</p>
+<ul class="org-ul">
+<li>Surely it is
+</li>
+
+<li>Helloworld!
+</li>
+</ul>
+</section>
+
+</section>
+<section>
+<section id="sec-2" >
+
+<h2><span class="section-number-2">2</span> This is another test</h2>
+<ul class="org-ul">
+<li>org-reveal rocks!
+</li>
+
+<li>github pages rocks too.
+</li>
+</ul>
 </section>
 </section>
 </div>
 </div>
 
-<script src="~/Downloads/reveal.js/lib/js/head.min.js"></script>
-<script src="~/Downloads/reveal.js/js/reveal.js"></script>
+<script src="http://cdn.jsdelivr.net/reveal.js/3.0.0/lib/js/head.min.js"></script>
+<script src="http://cdn.jsdelivr.net/reveal.js/3.0.0/js/reveal.js"></script>
 
 <script>
 // Full list of configuration options available here:
@@ -73,12 +91,12 @@ multiplex: {
 
 // Optional libraries used to extend on reveal.js
 dependencies: [
- { src: '~/Downloads/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
- { src: '~/Downloads/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
- { src: '~/Downloads/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
- { src: '~/Downloads/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
- { src: '~/Downloads/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
- { src: '~/Downloads/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+ { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+ { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+ { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
 ]
 });
 </script>

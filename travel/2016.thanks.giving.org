@@ -15,12 +15,55 @@
 * Day 1
 	SCHEDULED: <2016-11-24 Thu>
 
-** Eat
+** Bay area
 
-** Play
+*** TODO Breakfast: at home
+
+*** TODO Meet at San Carlos caltrain station@9:30am
+
+** San Cruz
+
+*** TODO [#B] Roaring Camp Railroads: http://www.roaringcamp.com/
+
+- before 11am, $27 / person
+
+Roaring Camp Railroads, Inc.
+5401 Graham Hill Road
+Felton, California 95018
+
+*** TODO Lunch: board work
+
+- https://www.google.com/maps/place/Santa+Cruz+Beach+Boardwalk/@36.9644407,-122.0163889,15z
+
+*** TODO [#A] Butterfly@Natural Bridges State Beach
+	:PROPERTIES:
+	:ADDRESS:  Natural Bridges State Beach, 2531 W Cliff Dr, Santa Cruz, CA 95060, USA
+	:END:
+
+- google map: https://www.google.com/maps/place/Natural+Bridges+State+Beach/@36.9527307,-122.0577673,15z/data=!4m5!3m4!1s0x0:0xdfe849514e5fab1c!8m2!3d36.9527307!4d-122.0577673
+
+** Monterey 
+
+*** TODO [#A] Monterey Bay
+
+*** TODO [#A] Pacific Grove Oceanview Boulevard
+
+- https://www.montereybayaquarium.org/visit
+
+*** TODO [#C] Bay Aquarium
+
+- https://www.montereybayaquarium.org/visit $49 / person
+
+** Seaside
+
+*** Check-in at 6pm
+
+*** Dinner: hotpot
 
 * Day 2
 	SCHEDULED: <2016-11-25 Fri>
+
+- around Carmel 
 
 ** Eat
 

@@ -32,6 +32,7 @@
 - https://zdoom.org/wiki/Sound_fonts
 - http://timidity.s11.xrea.com/files/readme_cfgp.htm
 - http://www.synthfont.com/soundfonts.html
+- best soundfont? https://musescore.org/en/node/103046
 
 - Update timidity configuration to use downloaded soundfonts
   - modify the timidity.cfg to make it looks like
@@ -73,8 +74,16 @@ Firstly download mscz file format
 
 * Lilypond
 
-** Emacs & org-mode integration
+** Emacs
 
 - (Yet to explore) lilypond-mode.el, which is available in lilypond installation
+
+*** How to use lilypond-mode
+
+- play the whole buffer: C-c RET
+
+- play code chunk in midi?
+
+** org-mode integration
 
 - (Yet to explore) http://orgmode.org/worg/org-contrib/babel/languages/ob-doc-lilypond.html

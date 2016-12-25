@@ -134,12 +134,12 @@
       theme_solarized() + scale_colour_solarized("blue") +
           theme(axis.title.x=element_blank(), axis.text.x=element_blank(), axis.ticks.x=element_blank()) +
               theme(axis.title.y=element_blank(), axis.text.y=element_blank(), axis.ticks.y=element_blank()) +
-                  geom_text(x=(max(totoro.df$x) + min(totoro.df$x)) / 2, y=median(totoro.df$y) * 1.2, label='Merry Christmas', size=10, family = 'xkcd') +
+                  geom_text(x=(max(totoro.df$x) + min(totoro.df$x)) / 2, y=median(totoro.df$y) * 1.15, label='Merry Christmas', size=15, family = 'xkcd') +
                       ggtitle("Using ggplot2 + geom_christmas_tree() + EBImage\nCode available at https://github.com/tninja/study/blob/test/christmas/christmas.tree.org") +
                           theme(legend.position = 'none')
   print(g)
 #+end_src
 
-#+results[1cebea9f83e830c6da1323d489aecc99643bf93f]: totoro.image
+#+results[cf5c607d787d0385f07d1febe480780d03ebff33]: totoro.image
 [[file:totoro.christmas.png]]
 

@@ -94,7 +94,7 @@
 - Convert to data frame format, and plot
 
 #+name: totoro.image
-#+begin_src R :session *christmas.tree.org* :cache yes :exports both :results output graphics :file totoro.christmas.png :width 480 :height 480
+#+begin_src R :session *christmas.tree.org* :cache yes :exports both :results output graphics :file totoro.christmas.png :width 480 :height 640
   ### Image processing
   library(EBImage)
 
@@ -121,16 +121,25 @@
   ### render
   library(ggplot2)
   library(ggthemes)
+  library(xkcd)
+
+  ## theme_xkcd <- theme(panel.background = element_rect(fill="white"),
+  ##                     axis.ticks = element_line(colour=NA),
+  ##                     panel.grid = element_line(colour="white"),
+  ##                     axis.text.y = element_text(colour=NA),
+  ##                     axis.text.x = element_text(colour="black"),
+  ##                     text = element_text(size=16, family="Humor Sans"))
+
   g <- ggplot(totoro.df, aes(x, y, fill=z)) + geom_christmas_tree(size=1) +
-      theme_solarized()  + scale_colour_solarized("blue")+
+      theme_solarized() + scale_colour_solarized("blue") +
           theme(axis.title.x=element_blank(), axis.text.x=element_blank(), axis.ticks.x=element_blank()) +
               theme(axis.title.y=element_blank(), axis.text.y=element_blank(), axis.ticks.y=element_blank()) +
-                  geom_text(x=(max(totoro.df$x) + min(totoro.df$x)) / 2, y=median(totoro.df$y) * 1.2, label='Merry Christmas', size=10) +
+                  geom_text(x=(max(totoro.df$x) + min(totoro.df$x)) / 2, y=median(totoro.df$y) * 1.2, label='Merry Christmas', size=10, family = 'xkcd') +
                       ggtitle("Using ggplot2 + geom_christmas_tree() + EBImage\nCode available at https://github.com/tninja/study/blob/test/christmas/christmas.tree.org") +
                           theme(legend.position = 'none')
   print(g)
 #+end_src
 
-#+results[2d725e8987bf1bf113c7010f1a75818f50203192]: totoro.image
+#+results[1cebea9f83e830c6da1323d489aecc99643bf93f]: totoro.image
 [[file:totoro.christmas.png]]
 

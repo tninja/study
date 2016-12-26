@@ -17,7 +17,7 @@
 - Copied from http://smarterpoland.pl/index.php/2015/12/geom_christmas_tree-a-new-geom-for-ggplot2-v2-0/
 
 #+name: geom.christmas.tree
-#+begin_src R :session *christmas.tree.org* :cache yes :exports both :results output none :eval never :ravel
+#+begin_src R :session *christmas.tree.org* :cache yes :exports both :results output none :eval never :ravel :tangle totoro.R
   library(ggplot2)
 
   GeomChristmasTree <- ggproto("GeomChristmasTree", Geom,
@@ -93,53 +93,71 @@
 - Resize Image: EBImage
 - Convert to data frame format, and plot
 
+** Totoro 1
+
 #+name: totoro.image
-#+begin_src R :session *christmas.tree.org* :cache yes :exports both :results output graphics :file totoro.christmas.png :width 480 :height 640
+#+begin_src R :session *christmas.tree.org* :cache no :exports both :results output graphics :file totoro.christmas.png :width 480 :height 640 :tangle totoro.R
+  merry.christmas <- function(img.file, bw.threshold=0.4, resize.factor=3) {
   ### Image processing
-  library(EBImage)
+      library(EBImage)
 
-  totoro.img <- readImage('totoro.png')
-  colorMode(totoro.img) = Grayscale
+      totoro.img <- readImage(img.file)
+      colorMode(totoro.img) = Grayscale
 
-  totoro.bw <- ifelse(totoro.img < 0.4, 1, 0)
-  totoro.bw.label <- bwlabel(totoro.bw)
+      totoro.bw <- ifelse(totoro.img < bw.threshold, 1, 0)
+      totoro.bw.label <- bwlabel(totoro.bw)
 
-  w <- dim(totoro.bw.label)[1]; h <- dim(totoro.bw.label)[2]
-  totoro.img.resize <- resize(totoro.bw.label, w / 3, h / 3)
+      w <- dim(totoro.bw.label)[1]; h <- dim(totoro.bw.label)[2]
+      totoro.img.resize <- resize(totoro.bw.label, w / resize.factor, h / resize.factor)
 
   ### display(totoro.img.resize)
 
   ### Convert to dataframe
-  library(dplyr)
-  totoro.df <- as.data.frame.table(totoro.img.resize) %>%
-      dplyr::filter(Var3 == 'A') %>%
-          mutate(x = - as.integer(Var1), y = - as.integer(Var2), z=Freq) %>%
-              select(x, y, z) %>% dplyr::filter(z > 0) %>% mutate(z=as.factor(z))
+      library(dplyr)
+      totoro.df <- as.data.frame.table(totoro.img.resize) %>%
+          dplyr::filter(Var3 == 'A') %>%
+              mutate(x = - as.integer(Var1), y = - as.integer(Var2), z=Freq) %>%
+                  select(x, y, z) %>% dplyr::filter(z > 0) %>% mutate(z=as.factor(z))
 
-  summary(totoro.df)
+      summary(totoro.df)
 
   ### render
-  library(ggplot2)
-  library(ggthemes)
-  library(xkcd)
+      library(ggplot2)
+      library(ggthemes)
+      library(xkcd)
 
-  ## theme_xkcd <- theme(panel.background = element_rect(fill="white"),
-  ##                     axis.ticks = element_line(colour=NA),
-  ##                     panel.grid = element_line(colour="white"),
-  ##                     axis.text.y = element_text(colour=NA),
-  ##                     axis.text.x = element_text(colour="black"),
-  ##                     text = element_text(size=16, family="Humor Sans"))
+      ## theme_xkcd <- theme(panel.background = element_rect(fill="white"),
+      ##                     axis.ticks = element_line(colour=NA),
+      ##                     panel.grid = element_line(colour="white"),
+      ##                     axis.text.y = element_text(colour=NA),
+      ##                     axis.text.x = element_text(colour="black"),
+      ##                     text = element_text(size=16, family="Humor Sans"))
 
-  g <- ggplot(totoro.df, aes(x, y, fill=z)) + geom_christmas_tree(size=1) +
-      theme_solarized() + scale_colour_solarized("blue") +
-          theme(axis.title.x=element_blank(), axis.text.x=element_blank(), axis.ticks.x=element_blank()) +
-              theme(axis.title.y=element_blank(), axis.text.y=element_blank(), axis.ticks.y=element_blank()) +
-                  geom_text(x=(max(totoro.df$x) + min(totoro.df$x)) / 2, y=median(totoro.df$y) * 1.15, label='Merry Christmas', size=15, family = 'xkcd') +
-                      ggtitle("Using ggplot2 + geom_christmas_tree() + EBImage\nCode available at https://github.com/tninja/study/blob/test/christmas/christmas.tree.org") +
-                          theme(legend.position = 'none')
+      g <- ggplot(totoro.df, aes(x, y, fill=z)) + geom_christmas_tree(size=1) +
+          theme_solarized() + scale_colour_solarized("blue") +
+              theme(axis.title.x=element_blank(), axis.text.x=element_blank(), axis.ticks.x=element_blank()) +
+                  theme(axis.title.y=element_blank(), axis.text.y=element_blank(), axis.ticks.y=element_blank()) +
+                      geom_text(x=(max(totoro.df$x) + min(totoro.df$x)) / 2, y=median(totoro.df$y) * 1.15, label='Merry Christmas', size=15, family = 'xkcd') +
+                          ggtitle("Using ggplot2 + geom_christmas_tree() + EBImage\nCode available at https://github.com/tninja/study/blob/test/christmas/christmas.tree.org") +
+                              theme(legend.position = 'none')
+  }
+
+  g <- merry.christmas('totoro.png')
   print(g)
 #+end_src
 
-#+results[cf5c607d787d0385f07d1febe480780d03ebff33]: totoro.image
+#+results[aa2336a83b7af878438b7bac74fa36999d28e93d]: totoro.image
 [[file:totoro.christmas.png]]
+
+
+** Totoro 2
+
+#+name: totoro2.image
+#+begin_src R :session *christmas.tree.org* :cache no :exports both :results output graphics :file totoro2.christmas.png :width 640 :height 360 :tangle totoro.R
+  g <- merry.christmas('totoro2.png', 0.4)
+  print(g)
+#+end_src
+
+#+results[af58eeb721f7d5312a070a13154aa058771ba54a]: totoro2.image
+[[file:totoro2.christmas.png]]
 

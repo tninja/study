@@ -1,0 +1,89 @@
+#+OPTIONS: ':nil *:t -:t ::t <:t H:3 \n:nil ^:nil arch:headline
+#+OPTIONS: author:t c:nil creator:nil d:(not "LOGBOOK") date:t e:t
+#+OPTIONS: email:nil f:t inline:t num:t p:nil pri:nil prop:nil stat:t
+#+OPTIONS: tags:t tasks:t tex:t timestamp:t title:t toc:nil todo:t
+#+OPTIONS: |:t
+#+TITLE: README
+#+DATE: <2016-11-06 Sun>
+#+AUTHOR: Kang Tu
+#+EMAIL: tninja@Pengs-MacBook-Pro.local
+#+LANGUAGE: en
+#+SELECT_TAGS: export
+#+EXCLUDE_TAGS: noexport
+#+CREATOR: Emacs 25.1.1 (Org mode 8.3.6)
+
+* What is Lilypond?
+
+- https://en.wikipedia.org/wiki/LilyPond
+- http://lilypond.org/
+
+* Quick start
+
+** Install stuffs needed
+
+*** required softwares
+
+- Install lilypond: brew cask install lilypond
+- timidity (command line tool to play midi): brew install timidity
+
+*** soundfonts (optional, if you want a better midi library than system default you might want to try this)
+
+- https://musescore.org/zh-hans/%E7%94%A8%E6%88%B7%E6%89%8B%E5%86%8C/soundfont-%E9%9F%B3%E8%89%B2%E5%BA%93
+- https://zdoom.org/wiki/Sound_fonts
+- http://timidity.s11.xrea.com/files/readme_cfgp.htm
+- http://www.synthfont.com/soundfonts.html
+- best soundfont? https://musescore.org/en/node/103046
+
+- Update timidity configuration to use downloaded soundfonts
+  - modify the timidity.cfg to make it looks like
+
+#+begin_example
+  dir /Users/tninja/local/usr/share/soundfonts/
+  soundfont FluidR3_GM.sf2
+#+end_example
+
+** Get music score resources
+
+*** [[https://musescore.com][Musescore]]
+
+- Install musescore: (to convert musescore file format to lilypond)
+ 
+**** Examples
+
+- 10000 reasons: https://musescore.com/user/442966/scores/1183611
+- ryu theme: https://musescore.com/user/2960946/scores/950351
+- lost painting from castlevania: https://musescore.com/user/9475036/scores/2683096
+
+**** Download and convert to lilypond mode
+
+Firstly download mscz file format
+
+#+name: convert
+#+begin_src shell :session *shell* :cache yes :exports both :results output none :eval never :ravel
+  ## Convert to xml
+  /Applications/MuseScore\ 2.app/Contents/MacOS/mscore The_Lost_Painting_from_Castlevania_Symphony_of_the_Night.mscz -o The_Lost_Painting_from_Castlevania_Symphony_of_the_Night.xml
+
+  ## Convert to .ly: lilypond
+  musicxml2ly The_Lost_Painting_from_Castlevania_Symphony_of_the_Night.xml
+
+  #### Modify the file to fix the problem
+
+  ## Compile the .ly and generate midi
+  lilypond -dmidi-extension=mid The_Lost_Painting_from_Castlevania_Symphony_of_the_Night.ly 
+#+end_src
+
+* Lilypond
+
+** Emacs
+
+- (Yet to explore) lilypond-mode.el, which is available in lilypond installation
+
+*** How to use lilypond-mode
+
+- play the whole buffer: C-c RET
+
+- play code chunk in midi?
+
+** org-mode integration
+
+- (Yet to explore) http://orgmode.org/worg/org-contrib/babel/languages/ob-doc-lilypond.html

@@ -1,0 +1,94 @@
+#+OPTIONS: ':nil *:t -:t ::t <:t H:3 \n:nil ^:nil arch:headline
+#+OPTIONS: author:t c:nil creator:nil d:(not "LOGBOOK") date:t e:t
+#+OPTIONS: email:nil f:t inline:t num:t p:nil pri:nil prop:nil stat:t
+#+OPTIONS: tags:t tasks:t tex:t timestamp:t title:t toc:nil todo:t
+#+OPTIONS: |:t
+#+TITLE: 2016.thanks.giving
+#+DATE: <2016-11-23 Wed>
+#+AUTHOR: Kang Tu
+#+EMAIL: tninja@Pengs-MacBook-Pro.local
+#+LANGUAGE: en
+#+SELECT_TAGS: export
+#+EXCLUDE_TAGS: noexport
+#+CREATOR: Emacs 25.1.1 (Org mode 8.3.6)
+
+* Day 1
+	SCHEDULED: <2016-11-24 Thu>
+
+** Bay area
+
+*** DONE Breakfast: at home
+
+*** DONE Meet at San Carlos caltrain station@9:30am
+
+** San Cruz
+
+*** CANCELLED [#B] Roaring Camp Railroads: http://www.roaringcamp.com/
+
+- before 11am, $27 / person
+
+Roaring Camp Railroads, Inc.
+5401 Graham Hill Road
+Felton, California 95018
+
+*** DONE Lunch: board work
+
+- https://www.google.com/maps/place/Santa+Cruz+Beach+Boardwalk/@36.9644407,-122.0163889,15z
+
+*** DONE [#A] Butterfly@Natural Bridges State Beach
+	:PROPERTIES:
+	:ADDRESS:  Natural Bridges State Beach, 2531 W Cliff Dr, Santa Cruz, CA 95060, USA
+	:END:
+
+- google map: https://www.google.com/maps/place/Natural+Bridges+State+Beach/@36.9527307,-122.0577673,15z/data=!4m5!3m4!1s0x0:0xdfe849514e5fab1c!8m2!3d36.9527307!4d-122.0577673
+
+** Monterey 
+
+*** DONE [#A] Monterey Bay
+
+*** CANCELLED [#C] Bay Aquarium
+
+- https://www.montereybayaquarium.org/visit $49 / person
+
+** Seaside
+
+*** DONE Check-in at 6pm
+
+*** Dinner: hotpot
+
+* Day 2
+	SCHEDULED: <2016-11-25 Fri>
+
+** Seaside
+
+*** TODO Breakfast: 红豆汤？
+
+** Carmel downtown
+
+*** TODO [#A] Shopping
+
+*** TODO [#B] Beach
+
+*** Lunch
+
+- Carmel downtown
+
+** Around Camel
+
+*** TODO [#A] Point Lobos State Reserve
+
+- Google map: https://www.google.com/maps/place/Point+Lobos+State+Natural+Reserve/@36.5798734,-121.9470331,12z/data=!4m21!1m15!4m14!1m6!1m2!1s0x808de4be65ff0527:0x70474dfe0823980!2sSeaside,+CA!2m2!1d-121.822098!2d36.6149217!1m6!1m2!1s0x808de88b727944c7:0xfc45d2b0213831ca!2sPoint+Lobos+State+Natural+Reserve,+62+California+1,+Carmel-By-The-Sea,+CA+93923!2m2!1d-121.9422821!2d36.5159123!3m4!1s0x808de88b727944c7:0xfc45d2b0213831ca!8m2!3d36.5159123!4d-121.9422821
+
+*** TODO [#B] Camel Mission
+
+- Google map: https://www.tripadvisor.com/Attraction_Review-g32172-d555442-Reviews-Carmel_Mission-Carmel_Monterey_County_California.html
+
+* Day 3
+	SCHEDULED: <2016-11-26 Sat>
+
+** Monterey 
+
+*** TODO [#A] Pacific Grove Oceanview Boulevard
+
+- https://www.montereybayaquarium.org/visit
+

@@ -1,0 +1,27 @@
+#+OPTIONS: ':nil *:t -:t ::t <:t H:3 \n:nil ^:nil arch:headline
+#+OPTIONS: author:t broken-links:nil c:nil creator:nil
+#+OPTIONS: d:(not "LOGBOOK") date:t e:t email:nil f:t inline:t num:t
+#+OPTIONS: p:nil pri:nil prop:nil stat:t tags:t tasks:t tex:t
+#+OPTIONS: timestamp:t title:t toc:nil todo:t |:t
+#+TITLE: 2018.hawaii
+#+DATE: <2017-09-10 Sun>
+#+AUTHOR: Kang Tu
+#+EMAIL: kang_tu@apple.com
+#+LANGUAGE: en
+#+SELECT_TAGS: export
+#+EXCLUDE_TAGS: noexport
+#+CREATOR: Emacs 25.2.1 (Org mode 9.0.9)
+
+* Reference
+
+** Wikitravel: http://wikitravel.org/en/Maui
+
+** Tripadvisor: https://www.tripadvisor.com/Tourism-g29220-Maui_Hawaii-Vacations.html
+
+* Place to visit [/]
+
+* Plan [/]
+
+** Day 1 - Day 4
+
+** Day 5 - Day 8
